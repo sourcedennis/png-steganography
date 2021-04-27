@@ -78,14 +78,14 @@ def read_msg( img: Image ) -> str:
 
 if __name__ == '__main__':
   img = Image.open( 'example_input.png' )
-  img2 = store_msg( img, 'Goats are like mushrooms')
+  img2 = store_msg( img, 'Goats are like mushrooms' )
 
   if img2 is None:
     print( 'The image has insufficient pixels to store the message' )
     sys.exit(0)
   
-  img2.save( 'output.png' )
+  img2.save( 'example_output.png' )
 
   # Read the message back
-  img3 = Image.open( 'output.png' )
+  img3 = Image.open( 'example_output.png' )
   print( read_msg( img3 ) )
